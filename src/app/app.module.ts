@@ -7,10 +7,14 @@ import { CookieModule } from 'ngx-cookie';
 import { HttpClientModule } from '@angular/common/http';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MatCardModule } from '@angular/material/card';
+import { MatButtonModule } from '@angular/material/button';
+import { CandidatesOverviewComponent } from './pages/candidates-overview/candidates-overview.component';
 
 @NgModule({
   declarations: [
     AppComponent,
+    CandidatesOverviewComponent
+
   ],
   imports: [
     BrowserModule,
@@ -25,7 +29,9 @@ import { MatCardModule } from '@angular/material/card';
       registrationStrategy: 'registerWhenStable:30000'
     }),
     BrowserAnimationsModule,
-    MatCardModule
+    MatCardModule,
+    MatButtonModule,
+
   ],
   providers: [],
   bootstrap: [AppComponent]
