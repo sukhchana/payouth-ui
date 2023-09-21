@@ -1,0 +1,14 @@
+version: 1.0
+runtime: nodejs16
+
+build:
+  commands:
+    build:
+      - npm install
+      - npm audit fix --force
+      - npm run buildProd
+
+run:
+  command: npm run startNode
+  network:
+    port: 3000

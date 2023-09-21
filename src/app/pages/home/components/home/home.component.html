@@ -1,0 +1,10 @@
+<div class="content" role="main">
+  <mat-card>
+    <mat-card-content>
+      <mat-progress-bar mode="determinate" value="40"></mat-progress-bar>
+      <div *ngFor="let election of elections; index as i;">
+        <app-election [election]="election"></app-election>
+      </div>
+    </mat-card-content>
+  </mat-card>
+</div>

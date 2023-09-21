@@ -1,0 +1,359 @@
+{
+  "elections": [
+    {
+      "name": "2023 USA",
+      "details": [
+        "The election is to elect the president of the USA",
+        "Voting Starts on 2023-01-01.",
+        "Voting Ends on 2023-02-01"
+      ],
+      "stages": [
+        {
+          "title": "Do you know the reason for the election?",
+          "elements": [
+            {
+              "title": "Background",
+              "picture": null,
+              "details": [
+                "The government election happens every 5 years.",
+                "The elections are held to ensure the governing body of the united states is performed by the party with the most elections."
+              ],
+              "links": [
+                {
+                  "label": "news",
+                  "url": "https://www.google.com/"
+                }
+              ],
+              "frames": [
+                {
+                  "label": "news",
+                  "url": "https://www.google.com/"
+                }
+              ],
+              "footer": "This site has no affiliation with any party."
+            }
+          ],
+          "comments": [
+            {
+              "userName": "brian yule",
+              "comment": "Should I vote in the election?"
+            },
+            {
+              "userName": "sukh chana",
+              "comment": "Yes, or you wont have your voice heard, and the wrong candidate could end up winning the election."
+            }
+          ]
+        },
+        {
+          "title": "Do you know what areas you most want to focus?",
+          "elements": [
+            {
+              "title": "Healthcare",
+              "picture": null,
+              "details": [
+              ],
+              "links": [
+                {
+                  "label": "web site",
+                  "url": "https://www.link-to-healthcare-information.com/"
+                }
+              ],
+              "frames": [],
+              "footer": "This site has no affiliation with any party."
+            },
+            {
+              "title": "Environment",
+              "picture": null,
+              "details": [
+              ],
+              "links": [
+                {
+                  "label": "web site",
+                  "url": "https://www.link-to-environment-information.com/"
+                }
+              ],
+              "frames": [],
+              "footer": "This site has no affiliation with any party."
+            },
+            {
+              "title": "Housing",
+              "picture": null,
+              "details": [
+              ],
+              "links": [
+                {
+                  "label": "web site",
+                  "url": "https://www.link-to-environment-information.com/"
+                }
+              ],
+              "frames": [],
+              "footer": "This site has no affiliation with any party."
+            },
+            {
+              "title": "Civil Rights",
+              "picture": null,
+              "details": [
+              ],
+              "links": [
+                {
+                  "label": "web site",
+                  "url": "https://www.link-to-environment-information.com/"
+                }
+              ],
+              "frames": [],
+              "footer": "This site has no affiliation with any party."
+            }
+          ],
+          "comments": [
+            {
+              "userName": "brian yule",
+              "comment": "I really care about housing"
+            },
+            {
+              "userName": "sukh chana",
+              "comment": "I agree, not enough housing was built in the last 10 years, and now housing is unaffordable."
+            }
+          ]
+        },
+        {
+          "title": "Do you know the candidates for the election?",
+          "elements": [
+            {
+              "title": "Brian Yule",
+              "picture": "base64 encoded jpeg",
+              "details": [
+                "Party: Democrat",
+                "Election Promises: 1. healthcare, 2. environment"
+              ],
+              "links": [
+                {
+                  "label": "web site",
+                  "url": "https://www.brianyule.com/"
+                }
+              ],
+              "frames": [],
+              "footer": "This site has no affiliation with any party."
+            }
+          ],
+          "comments": [
+            {
+              "userName": "brian yule",
+              "comment": "Should I vote in the election?"
+            },
+            {
+              "userName": "sukh chana",
+              "comment": "Yes, or you wont have your voice heard, and the wrong candidate could end up winning the election."
+            }
+          ]
+        },
+        {
+          "title": "Where can I go to discuss further?",
+          "elements": [
+            {
+              "title": "The live debates on TV.",
+              "picture": null,
+              "details": [
+                "You can watch the live debates on CNN on these dates:",
+                "Debate 1: Saturday 10th Jan 2023 on CNN at 8:30 EST",
+                "Debate 2: Saturday 30th Jan 2023 on CNN at 8:30 EST"
+              ],
+              "links": [
+                {
+                  "label": "CNN",
+                  "url": "https://www.cnn.com/"
+                }
+              ],
+              "frames": [],
+              "footer": "This site has no affiliation with any TV or news channel."
+            },
+            {
+              "title": "Boston Library",
+              "picture": null,
+              "details": [
+                "The Boston Library is hosting a discussion session on the election and candidates",
+                "This is happening on Saturday 8th Jan 2023 on the 2nd floor of the library at 8:30 EST"
+              ],
+              "links": [
+                {
+                  "label": "web site",
+                  "url": "https://www.bostom.library.com/"
+                }
+              ],
+              "frames": [],
+              "footer": "Seats are limited, and are on a first come, first serve basis."
+            }
+          ],
+          "comments": [
+            {
+              "userName": "brian yule",
+              "comment": "Should I vote in the election?"
+            },
+            {
+              "userName": "sukh chana",
+              "comment": "Yes, or you wont have your voice heard, and the wrong candidate could end up winning the election."
+            }
+          ]
+        },
+        {
+          "title": "Do you know where to vote?",
+          "elements": [
+            {
+              "title": "Polling Station 1",
+              "picture": "base64 encoded jpeg",
+              "details": [
+                "Opening Hours : 9am to 5pm monday to friday",
+                "Please ensure you bring your id with address for verification.",
+                "Address: 123, out of the way, MA, USA"
+              ],
+              "links": [
+                {
+                  "label": "Find on map",
+                  "url": "https://www.googlemaps.com?long=-2.234&lat=-1.234"
+                },
+                {
+                  "label": "Find your polling place",
+                  "url": "https://www.pavoterservices.pa.gov/Pages/PollingPlaceInfo.aspx"
+                }
+              ],
+              "frames": [
+                {
+                  "label": "Polling Stations",
+                  "url": "https://www.aws-site-with-google-map-of-polling-stations.com"
+                }
+              ],
+              "footer": "This site has no affiliation with any candidates."
+            },
+            {
+              "title": "Polling Station 2",
+              "picture": "base64 encoded jpeg",
+              "details": [
+                "Opening Hours : 9am to 5pm monday to friday",
+                "Please ensure you bring your id with address for verification.",
+                "Address: 123, in of the way, PS, USA"
+              ],
+              "links": [
+                {
+                  "label": "Find on map",
+                  "url": "https://www.googlemaps.com?long=-2.134&lat=-1.634"
+                }
+              ],
+              "frames": [
+                {
+                  "label": "Polling Stations",
+                  "url": "https://www.googlemaps.com/polling-stations"
+                }
+              ],
+              "footer": "This site has no affiliation with any candidates."
+            }
+          ],
+          "comments": [
+            {
+              "userName": "brian yule",
+              "comment": "Should I vote in the election?"
+            },
+            {
+              "userName": "sukh chana",
+              "comment": "Yes, or you wont have your voice heard, and the wrong candidate could end up winning the election."
+            }
+          ]
+        },
+        {
+          "title": "Are you registered to vote?",
+          "elements": [
+            {
+              "title": "Register to vote",
+              "details": [
+                "Please go to www.gov.registration.com to register to vote.",
+                "Registration is required even if you are voting from outside the USA"
+              ],
+              "links": [
+                {
+                  "label": "Voter Registration",
+                  "url": "https://www.www.gov.registration.com.com/"
+                }
+              ],
+              "frames": [],
+              "footer": "If you do not register, you cannot vote"
+            }
+          ],
+          "comments": [
+            {
+              "userName": "brian yule",
+              "comment": "Should I vote in the election?"
+            },
+            {
+              "userName": "sukh chana",
+              "comment": "Yes, or you wont have your voice heard, and the wrong candidate could end up winning the election."
+            }
+          ]
+        },
+        {
+          "title": "Do you know how to submit a postal vote?",
+          "elements": [
+            {
+              "title": "Postal Vote",
+              "details": [
+                "Please go to www.gov.registration.com to register to vote.",
+                "Registration is required even if you are voting from outside the USA"
+              ],
+              "links": [
+                {
+                  "label": "Voter Registration",
+                  "url": "https://www.www.gov.registration.com.com/"
+                }
+              ],
+              "frames": [],
+              "footer": "If you do not register, you cannot vote"
+            }
+          ],
+          "comments": [
+            {
+              "userName": "brian yule",
+              "comment": "Should I vote in the election?"
+            },
+            {
+              "userName": "sukh chana",
+              "comment": "Yes, or you wont have your voice heard, and the wrong candidate could end up winning the election."
+            }
+          ]
+        },
+        {
+          "title": "Congratulations, your ready to vote",
+          "elements": [
+            {
+              "title": "Success",
+              "details": [
+                "Your ready to go.",
+                "You can now rest assured that your vote on the day will count."
+              ],
+              "links": [
+              ],
+              "frames": [],
+              "footer": "We wish you and your candidate the very best in the up comming election."
+            }
+          ],
+          "comments": [
+            {
+              "userName": "brian yule",
+              "comment": "Should I vote in the election?"
+            },
+            {
+              "userName": "sukh chana",
+              "comment": "Yes, or you wont have your voice heard, and the wrong candidate could end up winning the election."
+            }
+          ]
+        }
+      ],
+      "comments": [
+        {
+          "userName": "brian yule",
+          "comment": "Thanks so much for a great web site with lots of information"
+        },
+        {
+          "userName": "sukh chana",
+          "comment": "Your very welcome!"
+        }
+      ]
+    }
+  ]
+}

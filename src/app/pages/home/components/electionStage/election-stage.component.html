@@ -1,0 +1,9 @@
+<mat-card>
+  <mat-card-header>
+    <p>{{stage?.title}}</p>
+    </mat-card-header>
+  <mat-card-content>
+    <app-election-stage-elements [elements]="stage?.elements"></app-election-stage-elements>
+    <app-election-comments [comments]="stage?.comments"></app-election-comments>
+  </mat-card-content>
+  </mat-card>

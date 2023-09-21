@@ -1,0 +1,14 @@
+<mat-card>
+  <mat-card-header>
+    <h2>Comments</h2>
+    </mat-card-header>
+  <mat-card-content>
+    <div *ngFor="let comment of comments; index as i;">
+      <app-election-comment [comment]="comment"></app-election-comment>
+    </div>
+  </mat-card-content>
+  <mat-card-actions>
+    <input type="text" #commentInput />
+    <button>Add Comment</button>
+  </mat-card-actions>
+</mat-card>
