@@ -1,6 +1,7 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { hasProvidedUserNameGuard } from './guards/has-provided-user-name-guard';
+import { CandidatesOverviewComponent } from './pages/candidates-overview/candidates-overview.component';
 
 const routes: Routes = [
   {
@@ -9,9 +10,8 @@ const routes: Routes = [
     //canLoad: [hasProvidedUserNameGuard]
   },
   {
-    path: 'candidates',
-    loadChildren: () => import('./pages/candidates-overview/candidates-overview.module').then(module => module.CandidatesOverviewModule),
-    //canLoad: [hasProvidedUserNameGuard]
+    path: 'candidates', 
+    component: CandidatesOverviewComponent 
   }
 ];
 
