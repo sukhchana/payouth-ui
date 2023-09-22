@@ -1,14 +1,18 @@
 <div class="login-page">
-    <div>
-        Email
-    </div>
-    <div>
-        <input type="email" matInput placeholder="Ex. user@example.com" [(ngModel)]="email">
-    </div>
-    <div>
-        <button mat-button color="primary" (click)="loginUser()">Log in</button>
-    </div>
-    <div>
-        <span>Don't have an account?</span><span (click)="navigateToRegistrationPage()" class="sign-up">Sign Up here</span>
-    </div>
+    <form class="login-form">
+        <div>
+            <mat-form-field class="example-full-width">
+                <mat-label>Email</mat-label>
+                <input type="email" matInput placeholder="Ex. user@example.com" [(ngModel)]="email" [ngModelOptions]="{standalone: true}">
+            </mat-form-field>
+        </div>
+        <div>
+            <button mat-button color="primary" class="log-in-button" (click)="loginUser()" [disabled]="!isEmailValid()">Log in</button>
+        </div>
+        <div>
+            <div class="sign-up-message-container">
+                <span>Don't have an account?</span><span (click)="navigateToRegistrationPage()" class="sign-up">Sign Up here</span>
+            </div>
+        </div>
+    </form>
 </div>

@@ -15,7 +15,7 @@ export class LoginComponent {
   constructor(private usersService: UsersService, private router: Router) { }
 
   loginUser(){
-    if(this.email != ""){
+    if(this.isEmailValid()){
       this.usersService.setUserEmail(this.email);
       this.router.navigate(['/']);
     }
@@ -23,5 +23,9 @@ export class LoginComponent {
 
   navigateToRegistrationPage(){
     this.router.navigate(['/register']);
+  }
+
+  isEmailValid(): boolean{
+    return this.email != "";
   }
 }

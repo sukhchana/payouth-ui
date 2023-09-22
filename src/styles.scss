@@ -8,27 +8,71 @@ $bg-color: #1976d2;
 
 .registration-page {
 
-    @media(max-width: 400){
-        padding: 10px;    
-    }
-
     padding: 40px;
 
     .back-button-container {
         margin-bottom: 10px;
     }
+
+    .sign-up-form {
+        padding-left: 25%;
+        padding-right: 25%;
+
+        .example-full-width {
+            width: 100%;
+        }
+
+        .register-button {
+            width: 100%;
+        }
+    }
+
+    @media(max-width: 800px){
+        padding: 20px; 
+        
+        .sign-up-form {
+            padding-left: 10%;
+            padding-right: 10%;
+        }
+    }
+
 }
 
 .login-page {
-    @media(max-width: 400){
-        padding: 10px;    
-    }
 
     padding: 40px;
 
     .sign-up {
         cursor: pointer;
         color: $bg-color;
+        margin-left: 5px;
+    }
+
+    .sign-up-message-container {
+        float: right;
+        padding: 5px;
+    }
+
+    .login-form {
+        padding-left: 25%;
+        padding-right: 25%;
+
+        .example-full-width {
+            width: 100%;
+        }
+    }
+
+    .log-in-button {
+        width: 100%;
+    }
+
+    @media(max-width: 800px){
+        padding: 20px;
+        
+        .login-form {
+            padding-left: 10%;
+            padding-right: 10%;
+        }
     }
 }
 

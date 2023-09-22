@@ -2,20 +2,20 @@
     <div class="back-button-container">
         <button mat-button color="primary" (click)="navigateToLoginPage()"><i class="material-icons center-icon">arrow_back_ios</i><span>Go back to login page</span></button>
     </div>
-    <form class="example-form">
+    <form class="sign-up-form">
         <div>
             <mat-form-field class="example-full-width">
-            <mat-label>Email</mat-label>
-            <input type="email" matInput [formControl]="registrationForm" [errorStateMatcher]="matcher"
-                    placeholder="Ex. pat@example.com">
-            <mat-error *ngIf="registrationForm.hasError('email') && !registrationForm.hasError('required')">
-                Please enter a valid email address
-            </mat-error>
-            <mat-error *ngIf="registrationForm.hasError('required')">
-                Email is <strong>required</strong>
-            </mat-error>
+                <mat-label>Email</mat-label>
+                <input type="email" matInput [formControl]="registrationForm" [errorStateMatcher]="matcher"
+                        placeholder="Ex. pat@example.com">
+                <mat-error *ngIf="registrationForm.hasError('email') && !registrationForm.hasError('required')">
+                    Please enter a valid email address
+                </mat-error>
+                <mat-error *ngIf="registrationForm.hasError('required')">
+                    Email is <strong>required</strong>
+                </mat-error>
             </mat-form-field>
         </div>
-        <button mat-button color="primary" (click)="registerUser()" [disabled]="isFormInvalid()">Register</button>
+        <button mat-button color="primary" class="register-button" (click)="registerUser()" [disabled]="isFormInvalid()">Register</button>
     </form>        
 </div>
