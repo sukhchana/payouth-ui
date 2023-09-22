@@ -1,13 +1,13 @@
-<div *ngFor="let candidate of getAllCandidates()">
-    <mat-card class="candidate-overview-card">
+<div *ngFor="let candidate of getAllCandidates()" (click)="goToCandidate(candidate.id)" >
+    <mat-card class="candidate-overview-card" >
         <mat-card-header>
-        <mat-card-title class="candidate-overview-name">{{candidate.firstName}}, {{candidate.lastName}}</mat-card-title>
-        <mat-card-subtitle class="candidate-overview-party">{{candidate.party}}</mat-card-subtitle>
+        <mat-card-title class="candidate-overview-name">{{candidate?.firstName}}, {{candidate?.lastName}}</mat-card-title>
+        <mat-card-subtitle class="candidate-overview-party">{{candidate?.party}}</mat-card-subtitle>
         </mat-card-header>
-        <img class="candidate-overview-image" mat-card-image src="https://material.angular.io/assets/img/examples/shiba2.jpg" alt="Photo of a {{candidate.firstName}}, {{candidate.lastName}}" >
+        <img class="candidate-overview-image" mat-card-image src="{{candidate?.picture}}" alt="Photo of a {{candidate?.firstName}}, {{candidate?.lastName}}" >
         <mat-card-content class="candidate-overview-summary">
         <p>
-            {{candidate.summary}}
+            {{candidate?.summary}}
         </p>
         </mat-card-content>
         <mat-card-actions class="candidate-overview-buttons">

@@ -2,6 +2,8 @@ import { Component } from '@angular/core';
 import { Observable } from 'rxjs';
 import { Candidate } from 'src/app/models/candidate';
 import { CandidatesService } from 'src/app/services/candidates.service';
+import { Router } from '@angular/router';
+
 
 @Component({
   selector: 'app-candidates-overview',
@@ -10,7 +12,7 @@ import { CandidatesService } from 'src/app/services/candidates.service';
 })
 export class CandidatesOverviewComponent {
 
-  constructor(private candidatesService: CandidatesService){ }
+  constructor(private candidatesService: CandidatesService, private router: Router){ }
   protected candidates: Candidate[] = [];
 
 
@@ -25,6 +27,10 @@ export class CandidatesOverviewComponent {
 
   public getAllCandidates(): Candidate[] {
     return this.candidates;
+  }
+
+  public goToCandidate(id: string): void {
+    this.router.navigate(['/candidate-details/'+id]);
   }
 
 }

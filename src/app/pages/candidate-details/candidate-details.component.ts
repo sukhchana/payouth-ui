@@ -16,7 +16,7 @@ export class CandidateDetailsComponent {
 
 
     constructor(private route: ActivatedRoute, private candidatesService: CandidatesService){ }
-    protected candidate: Candidate = { "firstName": "", "lastName": "", "party": "", "policies": [] , "pledges": [], "picture": "", "summary": "", incumbent: true};
+    protected candidate: Candidate = { "firstName": "", "lastName": "", "party": "", "policies": [] , "pledges": [], "picture": "", "summary": "", incumbent: true, id: ''};
   
     public ngOnInit(): void{
       let id = this.route.snapshot.params['id'];
