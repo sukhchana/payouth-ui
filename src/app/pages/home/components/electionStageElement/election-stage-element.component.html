@@ -5,7 +5,7 @@
   <mat-card-content>
     <img *ngIf="element && element.picture && element.picture.length > 0"
          mat-card-image
-         [src]="'data:image/jpeg;base64,'+element?.picture" />
+         [src]="element.picture" />
     <div *ngIf="element && element.details">
       <ul>
         <li *ngFor="let detail of element.details.split('\n')">

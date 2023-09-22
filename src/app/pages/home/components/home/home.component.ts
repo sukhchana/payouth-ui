@@ -21,17 +21,16 @@ export class HomeComponent implements OnInit, OnDestroy {
     ngOnInit() {
         this.subscription.add(this.service.getElections().subscribe(elections => {
             this.elections = elections;
+            this.setTimeout();
         }));
-        this.setTimeout();
     }
 
     public setTimeout() {
         window.setTimeout(() => {
-            this.subscription.unsubscribe();
             this.subscription.add(this.service.getElections().subscribe(elections => {
                 this.elections = elections;
+                this.setTimeout();
             }));
-            this.setTimeout();
         }, 10000);
     }
 
