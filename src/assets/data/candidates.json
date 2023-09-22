@@ -1,0 +1,10 @@
+[
+    { "firstName": "John", "lastName": "Doe", "party": "Democratic", "policies": ["A", "B"] , "pledges": ["E", "F", "G"], "picture": "PIC-LINK"},
+    { "firstName": "Jane", "lastName": "Doe", "party": "Republican", "policies": ["C", "D"] , "pledges": ["H", "I", "J"], "picture": "PIC-LINK"},
+    { "firstName": "Abcd", "lastName": "Doe", "party": "Republican", "policies": ["C", "D"] , "pledges": ["H", "I", "J"], "picture": "PIC-LINK"},
+    { "firstName": "Efgh", "lastName": "Doe", "party": "Republican", "policies": ["C", "D"] , "pledges": ["H", "I", "J"], "picture": "PIC-LINK"},
+    { "firstName": "Ijkl", "lastName": "Doe", "party": "Republican", "policies": ["C", "D"] , "pledges": ["H", "I", "J"], "picture": "PIC-LINK"},
+    { "firstName": "Mnop", "lastName": "Doe", "party": "Republican", "policies": ["C", "D"] , "pledges": ["H", "I", "J"], "picture": "PIC-LINK"},
+    { "firstName": "Qrst", "lastName": "Doe", "party": "Republican", "policies": ["C", "D"] , "pledges": ["H", "I", "J"], "picture": "PIC-LINK"},
+    { "firstName": "Jane", "lastName": "Doe", "party": "Republican", "policies": ["C", "D"] , "pledges": ["H", "I", "J"], "picture": "PIC-LINK"},
+]

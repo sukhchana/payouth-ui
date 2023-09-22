@@ -6,6 +6,7 @@ import { RegistrationComponent } from './pages/registration/registration.compone
 import { IsUserLoggedInGuard } from './guards/is-user-logged-in.guard';
 import { LoginComponent } from './pages/login/login.component';
 import { HowToVotePageComponent } from './pages/how-to-vote-page/how-to-vote-page.component';
+import { CandidateDetailsComponent } from './pages/candidate-details/candidate-details.component';
 
 const routes: Routes = [
   {
@@ -17,6 +18,11 @@ const routes: Routes = [
   {
     path: 'candidates', 
     component: CandidatesOverviewComponent,
+    canActivate: [IsUserLoggedInGuard] 
+  },
+  {
+    path: 'candidate-details', 
+    component: CandidateDetailsComponent,
     canActivate: [IsUserLoggedInGuard] 
   },
   {

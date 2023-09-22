@@ -1,1 +1,45 @@
-<p>how-to-vote-page works!</p>
+<div class="how-to-vote-page">
+    <div class="how-to-vote-container">
+        <ng-container *ngFor="let source of externalSources">
+            <div class="external-source-item" (click)="navigateToExternalLink(source.link)">
+                <div class="title-container">{{source.title}}</div>
+                <div class="icon-container">
+                    <img width="120" height="120" alt="PA Youth Vote" [src]="source.icon"/>
+                </div>
+                <div class="description-container">{{source.description}}</div>
+            </div>
+        </ng-container>
+
+        <ng-container *ngIf="false">
+            <div>
+                Register to vote
+            </div>
+            <iframe class="iframe-container" src="https://payouth.vote/register"></iframe>
+            <div>
+                Polling locations
+            </div>
+            <!--<iframe class="iframe-container" [src]="mapEndpoint"></iframe>-->
+            <iframe class="iframe-container" src="https://rtp89c6jki.us-east-1.awsapprunner.com"></iframe>
+            <div>
+                Mail Ballot
+            </div>
+            <iframe class="iframe-container" src="https://Vote.PA.gov/MailBallot"></iframe>
+            <div>
+                Registration status (link not working from my browser)
+            </div>
+            <iframe class="iframe-container" src="https://www.pavoterservices.pa.gov/pages/voterregistrationstatus.aspx"></iframe>
+            <div>
+                17 years old work opportunities
+            </div>
+            <iframe class="iframe-container" src="https://www.payouthvote.org/poll-working-map"></iframe>        
+            <div>
+                18 years old work opportunities
+            </div>
+            <iframe class="iframe-container" src="https://Vote.PA.gov/Resources/pages/be-a-poll-worker.aspx"></iframe>  
+            <div>
+                Get more informations
+            </div>
+            <iframe class="iframe-container" src="https://www.vote411.org/pennsylvania"></iframe>
+        </ng-container>          
+    </div>
+</div>
