@@ -12,12 +12,12 @@ export class CandidatesService {
 
   getAllCandidates(): Observable<Candidate[]> {
     return this.httpClient
-    .get<Candidate[]>('/assets/data/candidates.json');
+    .get<Candidate[]>('https://igwx8jmmyz.us-east-1.awsapprunner.com/candidates');
   }
   
   getCandidate(id:string): Observable<Candidate> {
     return this.httpClient
-    .get<Candidate>('/assets/data/candidate.json');
+    .get<Candidate>('https://igwx8jmmyz.us-east-1.awsapprunner.com/candidates/'+id);
   }
   
 }

@@ -7,4 +7,5 @@ export interface Candidate {
     picture: string;
     summary: string;
     incumbent: boolean;
+    id: string;
 }

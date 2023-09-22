@@ -1,6 +1,6 @@
 [![Node.js CI](https://github.com/YulerB/hackathon/actions/workflows/node.js.yml/badge.svg)](https://github.com/YulerB/hackathon/actions/workflows/node.js.yml)
 
-# AngularTourOfHeroes
+# Hackthon 2023 - PA Youth Vote - SPOC-TEAM
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 16.2.3.
 
