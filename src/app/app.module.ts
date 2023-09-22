@@ -20,13 +20,10 @@ import { HowToVotePageComponent } from './pages/how-to-vote-page/how-to-vote-pag
   declarations: [
     AppComponent,
     CandidatesOverviewComponent,
-<<<<<<< HEAD
-=======
     RegistrationComponent,
     LoginComponent,
     NavBarComponent,
     HowToVotePageComponent
->>>>>>> 25ba0abf397acbe0a6c2e58e3e77d15e4d1112cf
   ],
   imports: [
     BrowserModule,
@@ -43,12 +40,9 @@ import { HowToVotePageComponent } from './pages/how-to-vote-page/how-to-vote-pag
     BrowserAnimationsModule,
     MatCardModule,
     MatButtonModule,
-<<<<<<< HEAD
-=======
     FormsModule,
     ReactiveFormsModule,
     MatInputModule
->>>>>>> 25ba0abf397acbe0a6c2e58e3e77d15e4d1112cf
   ],
   providers: [],
   bootstrap: [AppComponent]
