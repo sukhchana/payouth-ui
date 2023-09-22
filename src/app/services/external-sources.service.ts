@@ -30,22 +30,22 @@ export class ExternalSourcesService {
         description: "Click here if you want to check you registration status!",
     } as externalSourceModel,
     {
-        title: "Are you 17 years old? Work as volonteer!",
+        title: "Are you 17 years old? Work as poll worker!",
         link: "https://www.payouthvote.org/poll-working-map",
         icon: "/assets/externalsourceIcons/PaYouth.png",
-        description: "Are you 17 years old? Work as volonteer!",
+        description: "Get paid and gain valuable expirence!",
     } as externalSourceModel,
     {
-        title: "Are you 18 years old? Work as volonteer!",
+        title: "Are you 18 years old? Work as poll worker!",
         link: "https://Vote.PA.gov/Resources/pages/be-a-poll-worker.aspx",
         icon: "/assets/icons/PA.png",
-        description: "Are you 18 years old? Work as volonteer!",
+        description: "Get paid and gain valuable expirence!",
     } as externalSourceModel,
     {
-        title: "Get more information!",
+        title: "Want to get more information on election?",
         link: "https://www.vote411.org/pennsylvania",
         icon: "/assets/externalsourceIcons/vote411.png",
-        description: "Get more information on elections!",
+        description: "Visit vote411 to get more details on upcoming elections!",
     } as externalSourceModel,
     {
         title: "Checkout PA Youth X account!",
