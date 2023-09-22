@@ -3,7 +3,12 @@
     <p>{{election?.name}}</p>
   </mat-card-header>
   <mat-card-content>
-    {{election?.details}}
+    <div *ngIf="election && election.details" >
+      <ul>
+        <li *ngFor="let detail of election.details.split('\n')">
+          {{detail}}</li>
+      </ul>
+    </div>
     <mat-progress-bar mode="determinate" [value]="progress"></mat-progress-bar>
     <app-election-stages [stages]="election?.stages" [electionIndex]="electionIndex"></app-election-stages>
     <app-election-comments [electionIndex]="electionIndex" [comments]="election?.comments"></app-election-comments>

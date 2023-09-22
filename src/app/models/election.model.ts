@@ -3,7 +3,7 @@ export interface elections {
 }
 export interface election {
   name: string,
-  details: string[],
+  details: string,
   stages: stage[],
   comments: comment[],
 }
@@ -15,7 +15,7 @@ export interface stage {
 export interface stageElement {
   title: string,
   picture: string,
-  details: string[],
+  details: string,
   links: link[],
   frames: link[],
   footer: string,

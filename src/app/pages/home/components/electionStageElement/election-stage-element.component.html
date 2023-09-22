@@ -6,18 +6,22 @@
     <img *ngIf="element && element.picture && element.picture.length > 0"
          mat-card-image
          [src]="'data:image/jpeg;base64,'+element?.picture" />
-    <p>{{element?.details}}</p>
+    <div *ngIf="element && element.details">
+      <ul>
+        <li *ngFor="let detail of element.details.split('\n')">
+          {{detail}}
+        </li>
+      </ul>
+    </div>
     <div *ngFor="let link of element?.links; index as i;">
       <a [href]="sanitizer.bypassSecurityTrustResourceUrl(link.url)">{{link.label}}</a>
     </div>
     <div *ngFor="let frame of element?.frames; index as i;">
       <h1>{{frame.label}}</h1>
-      <iframe
-        [src]="sanitizer.bypassSecurityTrustResourceUrl(frame.url)"
-        allowpaymentrequest="false"
-        allow="autoplay; encrypted-media"
-        allowfullscreen=""
-      ></iframe>
+      <iframe [src]="sanitizer.bypassSecurityTrustResourceUrl(frame.url)"
+              allowpaymentrequest="false"
+              allow="autoplay; encrypted-media"
+              allowfullscreen=""></iframe>
     </div>
   </mat-card-content>
   <mat-card-footer>{{element?.footer}}</mat-card-footer>
