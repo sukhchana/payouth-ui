@@ -11,3 +11,112 @@ body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
 
     padding: 40px;
 }
+
+.login-page {
+    @media(max-width: 400){
+        padding: 10px;    
+    }
+
+    padding: 40px;
+}
+
+$menuHeight: 60px;
+$menuBreakpoint: 800px;
+$bg-color: #1976d2;
+
+.navbar {
+  position: relative;
+  z-index: 999;
+  color: #FFFFFF;
+
+  a {
+    text-decoration: none;
+    color: #FFFFFF;
+  }
+
+  // Temporary solution replace it with someting not hardcoded
+  .center-icon {
+    float: left;
+    margin-top: 18px;
+    margin-right: 5px;
+  }
+
+  // Temporary solution replace it with someting not hardcoded
+  .title {
+    float: right;
+    margin-top: 10px;
+  }
+
+  ul {
+    background-color: $bg-color !important;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: #fff;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  }
+
+  li {
+    background-color: $bg-color;
+  }
+
+  .logotype {
+    a {
+      padding: 0 8px;
+      font-size: 1.4rem;
+      text-decoration: none;
+    }
+  }
+
+  .burger {
+    padding: 0 10px;
+    border-left: 1px solid #eee;
+    display: none;
+    cursor: pointer;
+
+    i {
+      color: #FFFFFF;
+      line-height: $menuHeight;
+    }
+
+    @media (max-width: $menuBreakpoint) {
+      display: block;
+    }
+  }
+
+  .menu {
+    display: flex;
+    align-items: center;
+
+    @media (max-width: $menuBreakpoint) {
+      display: none;
+
+      &.is-open {
+        display: block;
+        position: absolute;
+        top: #{$menuHeight + 2};
+        background: #fff;
+        width: 100%;
+
+        .menu-item {
+          border-bottom: 1px solid #cccccc;
+          color: #454545;
+        }
+      }
+    }
+
+    .menu-item {
+      padding: 0 10px;
+      height: $menuHeight;
+      line-height: $menuHeight;
+      text-decoration: none;
+      display: block;
+      text-transform: uppercase;
+      font-size: 0.8rem;
+      font-weight: 600;
+      cursor: pointer;
+    }
+  }
+}

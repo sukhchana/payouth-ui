@@ -11,13 +11,17 @@ import { MatButtonModule } from '@angular/material/button';
 import { CandidatesOverviewComponent } from './pages/candidates-overview/candidates-overview.component';
 import { RegistrationComponent } from './pages/registration/registration.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
-import { MatInputModule } from '@angular/material/input'; 
+import { MatInputModule } from '@angular/material/input';
+import { LoginComponent } from './pages/login/login.component';
+import { NavBarComponent } from './pages/nav-bar/nav-bar.component'; 
 
 @NgModule({
   declarations: [
     AppComponent,
     CandidatesOverviewComponent,
-    RegistrationComponent
+    RegistrationComponent,
+    LoginComponent,
+    NavBarComponent
   ],
   imports: [
     BrowserModule,
