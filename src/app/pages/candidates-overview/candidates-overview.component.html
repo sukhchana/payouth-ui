@@ -1,4 +1,4 @@
-<div *ngFor="let candidate of getAllCandidates()" (click)="goToCandidate(candidate.id)" >
+<div class="candidate-overview-master" *ngFor="let candidate of getAllCandidates()" (click)="goToCandidate(candidate.id)" >
     <mat-card class="candidate-overview-card" >
         <mat-card-header>
         <mat-card-title class="candidate-overview-name">{{candidate?.firstName}}, {{candidate?.lastName}}</mat-card-title>
