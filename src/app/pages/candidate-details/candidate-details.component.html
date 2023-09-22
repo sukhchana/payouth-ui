@@ -7,11 +7,11 @@
             <mat-card-subtitle class="candidate-overview-party">{{candidate?.party}}</mat-card-subtitle>
             </mat-card-header>
             <div>
-                <img class="candidate-overview-image" mat-card-image src="https://material.angular.io/assets/img/examples/shiba2.jpg" alt="Photo of a {{candidate.firstName}}, {{candidate.lastName}}" >
+                <img class="candidate-overview-image" mat-card-image src="{{candidate?.picture}}" alt="Photo of a {{candidate?.firstName}}, {{candidate?.lastName}}" >
             </div>
             <mat-card-content class="candidate-overview-summary">
             <p>
-                {{candidate.summary}}
+                {{candidate?.summary}}
             </p>
             </mat-card-content>
             <mat-card-actions class="candidate-overview-buttons">
