@@ -20,6 +20,7 @@
     <div *ngFor="let frame of element?.frames; index as i;">
       <h1>{{frame.label}}</h1>
       <iframe [src]="sanitizer.bypassSecurityTrustResourceUrl(frame.url)"
+              style="width: 25vw; height: 25vw; "
               allowpaymentrequest="false"
               allow="autoplay; encrypted-media"
               allowfullscreen=""></iframe>

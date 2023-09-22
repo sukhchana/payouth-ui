@@ -289,3 +289,12 @@ $bg-color: #1976d2;
     }
   }
 }
+
+.content{
+  li {
+    overflow-wrap: break-word;
+  }
+  p {
+    overflow-wrap: break-word;
+  }
+}
