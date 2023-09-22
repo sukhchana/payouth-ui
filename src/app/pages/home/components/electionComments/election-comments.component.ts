@@ -30,6 +30,38 @@ export class ElectionCommentsComponent  implements OnDestroy {
     this.subscription.unsubscribe();
   }
 
+
+  ngOnInit() {
+    this.setTimeout();
+  }
+
+  public load(setTimeoutToReoccur: boolean) {
+    const username = this.cookieService.get(EmailCookieName);
+    if (this.stageIndex) {
+        this.subscription.add(this.service.getStageComments(this.electionIndex, this.stageIndex).subscribe(comments => {
+          this.comments = comments;
+          this.CommentsUpdated.emit();
+          if (setTimeoutToReoccur) {
+            this.setTimeout();
+          }
+        }));
+    } else {
+        this.subscription.add(this.service.getElectionComments(this.electionIndex).subscribe(comments => {
+          this.comments = comments;
+          this.CommentsUpdated.emit();
+          if (setTimeoutToReoccur) {
+            this.setTimeout();
+          }
+        }));
+    }
+  }
+
+  public setTimeout() {
+    window.setTimeout(() => {
+      this.load(true);
+    }, 10000);
+  }
+
   public addComment() {
     const username = this.cookieService.get(EmailCookieName);
     if (this.stageIndex) {
@@ -39,6 +71,7 @@ export class ElectionCommentsComponent  implements OnDestroy {
             this.comments = comments;
           }));
         }
+        this.commentInput.nativeElement.value = '';
         this.CommentsUpdated.emit();
       }));
     } else {
@@ -46,9 +79,9 @@ export class ElectionCommentsComponent  implements OnDestroy {
         this.subscription.add(this.service.getElectionComments(this.electionIndex).subscribe(comments => {
           this.comments = comments;
         }));
+        this.commentInput.nativeElement.value = '';
         this.CommentsUpdated.emit();
       }));
     }
-    this.commentInput.nativeElement.value = '';
   }
 }
