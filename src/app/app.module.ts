@@ -9,11 +9,24 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MatCardModule } from '@angular/material/card';
 import { MatButtonModule } from '@angular/material/button';
 import { CandidatesOverviewComponent } from './pages/candidates-overview/candidates-overview.component';
+import { RegistrationComponent } from './pages/registration/registration.component';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { MatInputModule } from '@angular/material/input';
+import { LoginComponent } from './pages/login/login.component';
+import { NavBarComponent } from './pages/nav-bar/nav-bar.component';
+import { HowToVotePageComponent } from './pages/how-to-vote-page/how-to-vote-page.component'; 
 
 @NgModule({
   declarations: [
     AppComponent,
     CandidatesOverviewComponent,
+<<<<<<< HEAD
+=======
+    RegistrationComponent,
+    LoginComponent,
+    NavBarComponent,
+    HowToVotePageComponent
+>>>>>>> 25ba0abf397acbe0a6c2e58e3e77d15e4d1112cf
   ],
   imports: [
     BrowserModule,
@@ -30,6 +43,12 @@ import { CandidatesOverviewComponent } from './pages/candidates-overview/candida
     BrowserAnimationsModule,
     MatCardModule,
     MatButtonModule,
+<<<<<<< HEAD
+=======
+    FormsModule,
+    ReactiveFormsModule,
+    MatInputModule
+>>>>>>> 25ba0abf397acbe0a6c2e58e3e77d15e4d1112cf
   ],
   providers: [],
   bootstrap: [AppComponent]
