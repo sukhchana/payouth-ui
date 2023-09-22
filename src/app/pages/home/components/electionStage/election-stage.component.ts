@@ -1,4 +1,4 @@
-import { AfterViewInit, ChangeDetectorRef, Component, Input, OnDestroy, OnInit, ViewChild } from "@angular/core";
+import { AfterViewInit, ChangeDetectorRef, Component, EventEmitter, Input, OnDestroy, OnInit, Output, ViewChild } from "@angular/core";
 import { Subscription } from "rxjs";
 import { election, stage } from "../../../../models/election.model";
 import { electionService } from "../../../../services/election.service";
@@ -20,6 +20,7 @@ export class ElectionStageComponent implements OnInit, AfterViewInit {
   public panelOpenState: boolean = false;
   public cookieName: string = '';
   @ViewChild('toggle', { static: false }) toggle: MatSlideToggle;
+  @Output() CommentsUpdated = new EventEmitter();
 
   constructor(private service: electionService, private cookieService: CookieService, private changeDetectorRef: ChangeDetectorRef) {
   }
@@ -35,6 +36,10 @@ export class ElectionStageComponent implements OnInit, AfterViewInit {
       this.toggle.checked = currentValue.indexOf(stageValue) >= 0;
     }
     this.changeDetectorRef.detectChanges();
+  }
+
+  public commentsUpdated() {
+    this.CommentsUpdated.emit();
   }
 
   public toggleStageComplete(event: MatSlideToggleChange): void {

@@ -1,4 +1,4 @@
-import { Component, Input, OnDestroy, OnInit, Output } from "@angular/core";
+import { Component, EventEmitter, Input, OnDestroy, OnInit, Output } from "@angular/core";
 import { Subscription } from "rxjs";
 import { election } from "../../../../models/election.model";
 import { electionService } from "../../../../services/election.service";
@@ -16,8 +16,13 @@ export class ElectionComponent implements OnInit {
   @Input() election?: election;
   @Input() electionIndex: number;
   @Output() progress: number;
+  @Output() CommentsUpdated = new EventEmitter();
 
   constructor(private service: electionService, private cookieService: CookieService) {
+  }
+
+  public commentsUpdated() {
+    this.CommentsUpdated.emit();
   }
 
   ngOnInit() {

@@ -1,4 +1,4 @@
-import { Component, ElementRef, Input, OnDestroy, OnInit, Optional, ViewChild } from "@angular/core";
+import { Component, ElementRef, EventEmitter, Input, OnDestroy, OnInit, Optional, Output, ViewChild } from "@angular/core";
 import { Subscription } from "rxjs";
 import { comment, election, stage, stageElement } from "../../../../models/election.model";
 import { electionService } from "../../../../services/election.service";
@@ -19,6 +19,7 @@ export class ElectionCommentsComponent  implements OnDestroy {
   @Input() electionIndex: number;
   @Optional() @Input() stageIndex?: number;
   @ViewChild('commentInput', { static: false }) commentInput: ElementRef;
+  @Output() CommentsUpdated = new EventEmitter();
 
   constructor(private service: electionService, private cookieService: CookieService) {
 
@@ -32,9 +33,13 @@ export class ElectionCommentsComponent  implements OnDestroy {
   public addComment() {
     const username = this.cookieService.get(EmailCookieName);
     if (this.stageIndex) {
-      this.subscription.add(this.service.addStageComment(this.electionIndex, this.stageIndex, username, this.commentInput.nativeElement.value).subscribe());
+      this.subscription.add(this.service.addStageComment(this.electionIndex, this.stageIndex, username, this.commentInput.nativeElement.value).subscribe(() => {
+        this.CommentsUpdated.emit();
+    }));
     } else {
-      this.subscription.add(this.service.addElectionComment(this.electionIndex, username, this.commentInput.nativeElement.value).subscribe());
+      this.subscription.add(this.service.addElectionComment(this.electionIndex, username, this.commentInput.nativeElement.value).subscribe(() => {
+        this.CommentsUpdated.emit();
+      }));
     }
   }
 }
