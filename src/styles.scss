@@ -177,6 +177,20 @@ $bg-color: #1976d2;
   }
 }
 
+.county-maps {
+  padding: 40px;
+
+  .iframe-container {
+    width: 100%;
+    min-height: 70vh;
+  }
+
+  @media(max-width: 800px){
+    padding: 20px;      
+
+  }
+}
+
 .navbar {
   position: relative;
   z-index: 999;

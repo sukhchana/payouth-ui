@@ -3,6 +3,17 @@
         <button mat-button color="primary" (click)="navigateToLoginPage()"><i class="material-icons center-icon">arrow_back_ios</i><span>Go back to login page</span></button>
     </div>
     <form class="sign-up-form">
+        
+      <mat-form-field class="example-full-width">
+        <mat-label>Name</mat-label>
+        <input matInput [(ngModel)]="firstName" [ngModelOptions]="{standalone: true}">
+      </mat-form-field>
+
+      <mat-form-field class="example-full-width">
+        <mat-label>Lastname</mat-label>
+        <input matInput [(ngModel)]="lastName" [ngModelOptions]="{standalone: true}">
+      </mat-form-field>
+        
         <div>
             <mat-form-field class="example-full-width">
                 <mat-label>Email</mat-label>

@@ -3,6 +3,7 @@ import { FormControl, Validators,NgForm,FormGroupDirective } from '@angular/form
 import { UsersService } from 'src/app/services/users.service';
 import {ErrorStateMatcher} from '@angular/material/core';
 import { Router } from '@angular/router';
+import { User } from 'src/app/models/user';
 
 export class MyErrorStateMatcher implements ErrorStateMatcher {
   isErrorState(control: FormControl | null, form: FormGroupDirective | NgForm | null): boolean {
@@ -26,15 +27,38 @@ export class RegistrationComponent {
   selectedGender: any = "";
   selectedRace: any = "";
   selectedCounty: any = "";
+  firstName: any = "";
+  lastName: any = "";
 
   constructor(private usersService: UsersService, private router: Router) { }
 
   registerUser(){
     if(this.registrationForm.valid){
-      this.usersService.setUserEmail(this.registrationForm.value+"");
+      let user = {
+        email: this.registrationForm.value+"",
+        county: this.selectedCounty,
+        race: this.selectedRace,
+        gender: this.selectedGender.toLowerCase(),
+        firstName: this.firstName,
+        lastName: this.lastName      
+      } as User;
+
+      if(this.birthDate != ""){
+        user.dateOfBirth = this.formatDateShort(this.birthDate);
+      }
+
+      this.usersService.registerUser(user);
       // navigate to main page
       this.router.navigate(['/']);
     }
+  }
+
+  formatDateShort(date: Date): string {
+    const day = String(date.getDate()).padStart(2, '0'); 
+    const month = String(date.getMonth() + 1).padStart(2, '0'); 
+    const year = String(date.getFullYear()); 
+  
+    return `${month}/${day}/${year}`;
   }
 
   registrationForm = new FormControl('', [Validators.required, Validators.email]);
