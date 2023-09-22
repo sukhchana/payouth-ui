@@ -13,6 +13,7 @@ import { electionService } from "../../../../services/election.service";
 export class ElectionStagesComponent  {
   private subscription = new Subscription();
   @Input() stages?: stage[];
+  @Input() electionIndex: number;
 
   constructor(private service: electionService) {
 

@@ -1,9 +1,17 @@
-<mat-card>
-  <mat-card-header>
-    <p>{{stage?.title}}</p>
-    </mat-card-header>
-  <mat-card-content>
-    <app-election-stage-elements [elements]="stage?.elements"></app-election-stage-elements>
-    <app-election-comments [comments]="stage?.comments"></app-election-comments>
-  </mat-card-content>
+<mat-expansion-panel (opened)="panelOpenState = true"
+                     (closed)="panelOpenState = false">
+  <mat-expansion-panel-header>
+    <mat-panel-title   fxLayout="row" fxLayoutAlign="space-around center">
+      <p fxFlex>{{stage?.title}}</p>
+      <mat-slide-toggle (change)="toggleStageComplete($event)" #toggle>Complete</mat-slide-toggle>
+    </mat-panel-title>
+  </mat-expansion-panel-header>
+  <mat-card>
+    <mat-card-content>
+      <app-election-stage-elements [elements]="stage?.elements"></app-election-stage-elements>
+      <app-election-comments [comments]="stage?.comments"></app-election-comments>
+    </mat-card-content>
   </mat-card>
+</mat-expansion-panel>
+
+
