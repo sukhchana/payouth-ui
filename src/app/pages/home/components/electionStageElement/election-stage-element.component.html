@@ -3,7 +3,9 @@
     <p>{{element?.title}}</p>
   </mat-card-header>
   <mat-card-content>
-    <img mat-card-image [src]="'data:image/jpeg;base64,'+element?.picture" />
+    <img *ngIf="element && element.picture && element.picture.length > 0"
+         mat-card-image
+         [src]="'data:image/jpeg;base64,'+element?.picture" />
     <p>{{element?.details}}</p>
     <div *ngFor="let link of element?.links; index as i;">
       <a [href]="sanitizer.bypassSecurityTrustResourceUrl(link.url)">{{link.label}}</a>
