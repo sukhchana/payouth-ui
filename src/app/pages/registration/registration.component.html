@@ -34,7 +34,7 @@
         <div>
             <mat-form-field class="datepicker-custom">
                 <mat-label>Date of birth</mat-label>
-                <input matInput [matDatepicker]="picker">
+                <input matInput [matDatepicker]="picker" [(ngModel)]="birthDate" [ngModelOptions]="{standalone: true}">
                 <mat-hint>MM/DD/YYYY</mat-hint>
                 <mat-datepicker-toggle matIconSuffix [for]="picker"></mat-datepicker-toggle>
                 <mat-datepicker #picker></mat-datepicker>
@@ -43,7 +43,7 @@
         <div>
             <mat-form-field class="custom-select">
                 <mat-label>Gender</mat-label>
-                <mat-select>
+                <mat-select [(ngModel)]="selectedGender" [ngModelOptions]="{standalone: true}">
                   <mat-option *ngFor="let gender of genders" [value]="gender">
                     {{gender}}
                   </mat-option>
@@ -53,7 +53,7 @@
         <div>
             <mat-form-field class="custom-select">
                 <mat-label>Race</mat-label>
-                <mat-select>
+                <mat-select [(ngModel)]="selectedRace" [ngModelOptions]="{standalone: true}">
                   <mat-option *ngFor="let race of races" [value]="race">
                     {{race}}
                   </mat-option>
@@ -63,7 +63,7 @@
         <div>
             <mat-form-field class="custom-select">
                 <mat-label>County</mat-label>
-                <mat-select>
+                <mat-select [(ngModel)]="selectedCounty" [ngModelOptions]="{standalone: true}">
                   <mat-option *ngFor="let county of counties" [value]="county">
                     {{county}}
                   </mat-option>

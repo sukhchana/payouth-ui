@@ -22,6 +22,10 @@ export class RegistrationComponent {
   genders: string[] = ["Male", "Female", "Other", "I don't want disclosure this information"];
   races: string[] = ["Black or African American", "White", "Asian", "American Indian or Alaska Native", "Native Hawaiian or Other Pacific Islander", "I don't want disclosure this information"];
   counties: string[] = ["Adams County", "Allegheny County", "Armstrong County", "Beaver County", "I don't want disclosure this information"];
+  birthDate: any = "";
+  selectedGender: any = "";
+  selectedRace: any = "";
+  selectedCounty: any = "";
 
   constructor(private usersService: UsersService, private router: Router) { }
 

@@ -128,6 +128,18 @@ $bg-color: #1976d2;
         }  
     }
 
+    @media(max-width: 400px){
+      padding: 15px;      
+
+      .how-to-vote-container {
+          padding-left: 5%;
+          padding-right: 5%;
+          display: grid;
+          grid-template-columns: repeat(2, 1fr);
+          grid-gap: 10px;
+      }  
+  }
+
     .external-source-item {
         border: 1px solid #1976d2;
         padding: 10px;
@@ -186,6 +198,22 @@ $bg-color: #1976d2;
   .title {
     float: right;
     margin-top: 10px;
+  }
+
+  .title-short {
+    display: none;
+    float: right;
+    margin-top: 10px;
+  }
+
+  @media (max-width: 800px) {
+    .title {
+      display: none;
+    }
+
+    .title-short {
+      display: inline;
+    }
   }
 
   ul {
