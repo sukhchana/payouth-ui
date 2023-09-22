@@ -6,6 +6,6 @@
     {{election?.details}}
     <mat-progress-bar mode="determinate" [value]="progress"></mat-progress-bar>
     <app-election-stages [stages]="election?.stages" [electionIndex]="electionIndex"></app-election-stages>
-    <app-election-comments [comments]="election?.comments"></app-election-comments>
+    <app-election-comments [electionIndex]="electionIndex" [comments]="election?.comments"></app-election-comments>
   </mat-card-content>
 </mat-card>

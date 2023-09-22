@@ -14,4 +14,23 @@ export class electionService {
     return this.httpClient
       .get<election[]>('https://igwx8jmmyz.us-east-1.awsapprunner.com/elections');
   }
+
+  addStageComment(electionIndex: number, stageIndex: number, username: string, comment: string): Observable<any> {
+    return this.httpClient
+      .post<election[]>(`https://igwx8jmmyz.us-east-1.awsapprunner.com/elections/${electionIndex}/stages/${stageIndex }/comments`,
+        {
+          username,
+          comment
+        }
+      );
+  }
+  addElectionComment(electionIndex: number, username: string, comment: string) : Observable<any>{
+    return this.httpClient
+      .post<election[]>(`https://igwx8jmmyz.us-east-1.awsapprunner.com/elections/${electionIndex}/comments`,
+        {
+          username,
+          comment
+        }
+      );
+  }
 }

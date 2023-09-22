@@ -8,7 +8,7 @@
     </div>
   </mat-card-content>
   <mat-card-actions>
-    <input type="text" #commentInput />
-    <button>Add Comment</button>
+    <input matInput type="text" #commentInput />
+    <button mat-raised-button color="primary" (click)="addComment()">Add Comment</button>
   </mat-card-actions>
 </mat-card>
