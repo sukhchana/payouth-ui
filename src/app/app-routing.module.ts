@@ -2,6 +2,7 @@ import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { hasProvidedUserNameGuard } from './guards/has-provided-user-name-guard';
 import { CandidatesOverviewComponent } from './pages/candidates-overview/candidates-overview.component';
+import { RegistrationComponent } from './pages/registration/registration.component';
 
 const routes: Routes = [
   {
@@ -12,7 +13,11 @@ const routes: Routes = [
   {
     path: 'candidates', 
     component: CandidatesOverviewComponent 
-  }
+  },
+  {
+    path: 'register', 
+    component: RegistrationComponent 
+  },
 ];
 
 @NgModule({

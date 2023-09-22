@@ -2,3 +2,12 @@
 
 html, body { height: 100%; }
 body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+
+.registration-page {
+
+    @media(max-width: 400){
+        padding: 10px;    
+    }
+
+    padding: 40px;
+}
