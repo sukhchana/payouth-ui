@@ -17,6 +17,8 @@ export class MyErrorStateMatcher implements ErrorStateMatcher {
   styleUrls: ['./registration.component.scss']
 })
 export class RegistrationComponent {
+  password: string = "";
+  repassword: string = "";
 
   constructor(private usersService: UsersService, private router: Router) { }
 
