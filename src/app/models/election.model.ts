@@ -25,6 +25,6 @@ export interface link {
   url: string,
 }
 export interface comment {
-  userName: string,
+  username: string,
   comment: string
 }
