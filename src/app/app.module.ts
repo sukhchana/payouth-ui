@@ -23,6 +23,7 @@ import { MatListModule } from '@angular/material/list';
 import { MatDividerModule } from '@angular/material/divider';
 
 import { PollingStationsComponent } from './pages/polling-stations/polling-stations.component';
+import { VoterRegistrationsComponent } from './pages/voter-registrations/voter-registrations.component';
 
 @NgModule({
   declarations: [
@@ -33,7 +34,8 @@ import { PollingStationsComponent } from './pages/polling-stations/polling-stati
     NavBarComponent,
     HowToVotePageComponent,
     CandidateDetailsComponent,
-    PollingStationsComponent
+    PollingStationsComponent,
+    VoterRegistrationsComponent
   ],
   imports: [
     BrowserModule,

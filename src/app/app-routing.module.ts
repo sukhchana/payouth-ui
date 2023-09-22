@@ -8,6 +8,7 @@ import { LoginComponent } from './pages/login/login.component';
 import { HowToVotePageComponent } from './pages/how-to-vote-page/how-to-vote-page.component';
 import { CandidateDetailsComponent } from './pages/candidate-details/candidate-details.component';
 import { PollingStationsComponent } from './pages/polling-stations/polling-stations.component';
+import { VoterRegistrationsComponent } from './pages/voter-registrations/voter-registrations.component';
 
 const routes: Routes = [
   {
@@ -42,6 +43,11 @@ const routes: Routes = [
   {
     path: 'polling-stations', 
     component: PollingStationsComponent,
+    canActivate: [IsUserLoggedInGuard]  
+  },
+  {
+    path: 'voter-registrations', 
+    component: VoterRegistrationsComponent,
     canActivate: [IsUserLoggedInGuard]  
   }
 ];
