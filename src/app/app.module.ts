@@ -16,7 +16,8 @@ import { MatDatepickerModule } from '@angular/material/datepicker';
 import {MatSelectModule} from '@angular/material/select';
 import { LoginComponent } from './pages/login/login.component';
 import { NavBarComponent } from './pages/nav-bar/nav-bar.component';
-import { HowToVotePageComponent } from './pages/how-to-vote-page/how-to-vote-page.component'; 
+import { HowToVotePageComponent } from './pages/how-to-vote-page/how-to-vote-page.component';
+import { CandidateDetailsComponent } from './pages/candidate-details/candidate-details.component'; 
 import { MatNativeDateModule } from '@angular/material/core';
 
 @NgModule({
@@ -26,7 +27,8 @@ import { MatNativeDateModule } from '@angular/material/core';
     RegistrationComponent,
     LoginComponent,
     NavBarComponent,
-    HowToVotePageComponent
+    HowToVotePageComponent,
+    CandidateDetailsComponent
   ],
   imports: [
     BrowserModule,

@@ -21,5 +21,8 @@ export class CandidatesOverviewComponent {
   // protected lastName: string  = "Doe";
   // protected party: string  = "Independent";
 
+  public getAllCandidates(): Candidate[] {
+    return this.candidates;
+  }
 
 }
