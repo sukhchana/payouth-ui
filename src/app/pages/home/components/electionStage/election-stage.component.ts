@@ -1,4 +1,4 @@
-import { Component, Input, OnDestroy, OnInit, ViewChild } from "@angular/core";
+import { AfterViewInit, ChangeDetectorRef, Component, Input, OnDestroy, OnInit, ViewChild } from "@angular/core";
 import { Subscription } from "rxjs";
 import { election, stage } from "../../../../models/election.model";
 import { electionService } from "../../../../services/election.service";
@@ -12,25 +12,29 @@ import { MatSlideToggle, MatSlideToggleChange } from "@angular/material/slide-to
     styleUrls: ['./election-stage.component.scss'],
   }
 )
-export class ElectionStageComponent implements OnInit {
+export class ElectionStageComponent implements OnInit, AfterViewInit {
   private subscription = new Subscription();
   @Input() stage?: stage;
-  @Input() electionIndex?: number;
+  @Input() stageIndex: number;
+  @Input() electionIndex: number;
   public panelOpenState: boolean = false;
   public cookieName: string = '';
   @ViewChild('toggle', { static: false }) toggle: MatSlideToggle;
 
-  constructor(private service: electionService, private cookieService: CookieService) {
+  constructor(private service: electionService, private cookieService: CookieService, private changeDetectorRef: ChangeDetectorRef) {
   }
 
   ngOnInit() {
     this.cookieName = 'game_value_' + this.electionIndex?.toString();
+  }
 
+  ngAfterViewInit() {
     if (this.stage && this.stage.title) {
       const currentValue = this.cookieService.get(this.cookieName);
       const stageValue = this.stage.title + ';';
-      this.toggle.writeValue(currentValue.indexOf(stageValue) >= 0);
+      this.toggle.checked = currentValue.indexOf(stageValue) >= 0;
     }
+    this.changeDetectorRef.detectChanges();
   }
 
   public toggleStageComplete(event: MatSlideToggleChange): void {

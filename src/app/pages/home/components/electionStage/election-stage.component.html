@@ -9,7 +9,7 @@
   <mat-card>
     <mat-card-content>
       <app-election-stage-elements [elements]="stage?.elements"></app-election-stage-elements>
-      <app-election-comments [comments]="stage?.comments"></app-election-comments>
+      <app-election-comments [comments]="stage?.comments" [electionIndex]="electionIndex" [stageIndex]="stageIndex" ></app-election-comments>
     </mat-card-content>
   </mat-card>
 </mat-expansion-panel>
