@@ -31,7 +31,7 @@ export class HomeComponent implements OnInit, OnDestroy {
                 this.elections = elections;
                 this.setTimeout();
             }));
-        }, 10000);
+        }, 30000);
     }
 
     ngOnDestroy() {
