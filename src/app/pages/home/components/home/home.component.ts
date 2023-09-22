@@ -19,29 +19,16 @@ export class HomeComponent implements OnInit, OnDestroy {
   }
 
   public commentsUpdated() {
-//    this.load(false);
   }
 
   ngOnInit() {
-    this.load(true);
+    this.load();
   }
 
-  public load(setTimeoutToReoccur: boolean) {
+  public load() {
     this.subscription.add(this.service.getElections().subscribe(elections => {
       this.elections = elections;
-      if (setTimeoutToReoccur) {
-        this.setTimeout();
-      }
     }));
-  }
-
-  public setTimeout() {
-    window.setTimeout(() => {
-      this.subscription.add(this.service.getElections().subscribe(elections => {
-        this.elections = elections;
-        this.setTimeout();
-      }));
-    }, 60000);
   }
 
   ngOnDestroy() {
