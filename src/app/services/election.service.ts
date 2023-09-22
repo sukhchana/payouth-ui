@@ -17,7 +17,7 @@ export class electionService {
 
   addStageComment(electionIndex: number, stageIndex: number, username: string, comment: string): Observable<any> {
     return this.httpClient
-      .post<election[]>(`https://igwx8jmmyz.us-east-1.awsapprunner.com/elections/${electionIndex}/stages/${stageIndex }/comments`,
+      .post<election[]>(`https://igwx8jmmyz.us-east-1.awsapprunner.com/elections/${electionIndex + 1}/stages/${stageIndex + 1}/comments`,
         {
           username,
           comment
@@ -26,7 +26,7 @@ export class electionService {
   }
   addElectionComment(electionIndex: number, username: string, comment: string) : Observable<any>{
     return this.httpClient
-      .post<election[]>(`https://igwx8jmmyz.us-east-1.awsapprunner.com/elections/${electionIndex}/comments`,
+      .post<election[]>(`https://igwx8jmmyz.us-east-1.awsapprunner.com/elections/${electionIndex + 1}/comments`,
         {
           username,
           comment
