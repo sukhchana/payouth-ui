@@ -19,8 +19,7 @@ export class NavBarComponent {
 
   logout(){
     this.usersService.logout();
-    this.router.navigate(["/login"]);
-    this.isMenuOpen = false;
+    this.navigateToPage("/login");
   }
 
   // TODO replace it with Observable
@@ -30,5 +29,10 @@ export class NavBarComponent {
 
   getUserEmail(){
     return this.usersService.getUserEmail();
+  }
+
+  navigateToPage(path: string){
+    this.router.navigate([path]);
+    this.isMenuOpen = false;
   }
 }
