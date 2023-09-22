@@ -21,7 +21,7 @@ const routes: Routes = [
     canActivate: [IsUserLoggedInGuard] 
   },
   {
-    path: 'candidate-details', 
+    path: 'candidate-details/:id', 
     component: CandidateDetailsComponent,
     canActivate: [IsUserLoggedInGuard] 
   },

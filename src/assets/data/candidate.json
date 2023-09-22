@@ -1,0 +1,1 @@
+{ "firstName": "Jane", "lastName": "Doe", "party": "Republican", "policies": ["C", "D"] , "pledges": ["H", "I", "J"], "picture": "PIC-LINK", "summary": "example summary goes here", "incumbent": true}

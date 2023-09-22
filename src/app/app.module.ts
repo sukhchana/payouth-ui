@@ -19,6 +19,9 @@ import { NavBarComponent } from './pages/nav-bar/nav-bar.component';
 import { HowToVotePageComponent } from './pages/how-to-vote-page/how-to-vote-page.component';
 import { CandidateDetailsComponent } from './pages/candidate-details/candidate-details.component'; 
 import { MatNativeDateModule } from '@angular/material/core';
+import { MatListModule } from '@angular/material/list';
+import { MatDividerModule } from '@angular/material/divider';
+
 
 @NgModule({
   declarations: [
@@ -49,7 +52,9 @@ import { MatNativeDateModule } from '@angular/material/core';
     MatInputModule,
     MatDatepickerModule,
     MatSelectModule,
-    MatNativeDateModule
+    MatNativeDateModule, 
+    MatListModule,
+    MatDividerModule
   ],
   providers: [],
   bootstrap: [AppComponent]

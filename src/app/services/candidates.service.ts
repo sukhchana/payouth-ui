@@ -14,4 +14,10 @@ export class CandidatesService {
     return this.httpClient
     .get<Candidate[]>('/assets/data/candidates.json');
   }
+  
+  getCandidate(id:string): Observable<Candidate> {
+    return this.httpClient
+    .get<Candidate>('/assets/data/candidate.json');
+  }
+  
 }
