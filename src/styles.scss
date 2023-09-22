@@ -3,7 +3,7 @@
 html, body { height: 100%; }
 body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
 $menuHeight: 60px;
-$menuBreakpoint: 1200px;
+$menuBreakpoint: 1400px;
 $bg-color: #1976d2;
 
 .registration-page {
@@ -149,6 +149,20 @@ $bg-color: #1976d2;
             text-align: center;
         }
     }
+}
+
+.polling-stations {
+  padding: 40px;
+
+  .iframe-container {
+    width: 100%;
+    min-height: 70vh;
+  }
+
+  @media(max-width: 800px){
+    padding: 20px;      
+
+  }
 }
 
 .navbar {

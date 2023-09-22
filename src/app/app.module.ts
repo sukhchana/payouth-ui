@@ -19,6 +19,7 @@ import { NavBarComponent } from './pages/nav-bar/nav-bar.component';
 import { HowToVotePageComponent } from './pages/how-to-vote-page/how-to-vote-page.component';
 import { CandidateDetailsComponent } from './pages/candidate-details/candidate-details.component'; 
 import { MatNativeDateModule } from '@angular/material/core';
+import { PollingStationsComponent } from './pages/polling-stations/polling-stations.component';
 
 @NgModule({
   declarations: [
@@ -28,7 +29,8 @@ import { MatNativeDateModule } from '@angular/material/core';
     LoginComponent,
     NavBarComponent,
     HowToVotePageComponent,
-    CandidateDetailsComponent
+    CandidateDetailsComponent,
+    PollingStationsComponent
   ],
   imports: [
     BrowserModule,
