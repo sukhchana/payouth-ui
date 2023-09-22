@@ -2,7 +2,7 @@
   <mat-card-content>
     <mat-accordion>
       <div *ngFor="let stage of stages; index as i;">
-        <app-election-stage [stage]="stage"></app-election-stage>
+        <app-election-stage [stage]="stage" [electionIndex]="electionIndex"></app-election-stage>
       </div>
     </mat-accordion>
   </mat-card-content>

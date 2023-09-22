@@ -2,6 +2,7 @@ import { Component, OnDestroy, OnInit } from "@angular/core";
 import { Subscription } from "rxjs";
 import { election, elections } from "../../../../models/election.model";
 import { electionService } from "../../../../services/election.service";
+import { CookieService } from "ngx-cookie-service";
 
 @Component(
   {
@@ -15,13 +16,13 @@ export class HomeComponent implements OnInit, OnDestroy {
   public elections?: election[];
 
   constructor(private service: electionService) {
-
   }
 
   ngOnInit() {
     this.subscription.add(this.service.getElections().subscribe(elections => {
-      this.elections = elections.elections;
+      this.elections = elections;
     }));
+
   }
 
   ngOnDestroy() {
