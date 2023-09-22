@@ -1,0 +1,33 @@
+<div class="registration-page">
+    <div class="back-button-container">
+        <button mat-button color="primary" (click)="navigateToLoginPage()"><i class="material-icons center-icon">arrow_back_ios</i><span>Go back to login page</span></button>
+    </div>
+    <form class="sign-up-form">
+        <div>
+            <mat-form-field class="example-full-width">
+                <mat-label>Email</mat-label>
+                <input type="email" matInput [formControl]="registrationForm" [errorStateMatcher]="matcher"
+                        placeholder="Ex. pat@example.com">
+                <mat-error *ngIf="registrationForm.hasError('email') && !registrationForm.hasError('required')">
+                    Please enter a valid email address
+                </mat-error>
+                <mat-error *ngIf="registrationForm.hasError('required')">
+                    Email is <strong>required</strong>
+                </mat-error>
+            </mat-form-field>
+        </div>
+        <div>
+            <mat-form-field class="example-full-width">
+                <mat-label>Password</mat-label>
+                <input type="password" matInput [(ngModel)]="password" [ngModelOptions]="{standalone: true}">
+            </mat-form-field>
+        </div>
+        <div>
+            <mat-form-field class="example-full-width">
+                <mat-label>Repeat password</mat-label>
+                <input type="password" matInput [(ngModel)]="repassword" [ngModelOptions]="{standalone: true}">
+            </mat-form-field>
+        </div>
+        <button mat-button color="primary" class="register-button" (click)="registerUser()" [disabled]="isFormInvalid()">Register</button>
+    </form>        
+</div>

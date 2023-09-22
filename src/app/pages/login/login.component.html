@@ -1,0 +1,24 @@
+<div class="login-page">
+    <form class="login-form">
+        <div>
+            <mat-form-field class="example-full-width">
+                <mat-label>Email</mat-label>
+                <input type="email" matInput placeholder="Ex. user@example.com" [(ngModel)]="email" [ngModelOptions]="{standalone: true}">
+            </mat-form-field>
+        </div>
+        <div>
+            <mat-form-field class="example-full-width">
+                <mat-label>Password</mat-label>
+                <input type="password" matInput [(ngModel)]="password" [ngModelOptions]="{standalone: true}">
+            </mat-form-field>
+        </div>
+        <div>
+            <button mat-button color="primary" class="log-in-button" (click)="loginUser()" [disabled]="!isEmailValid()">Log in</button>
+        </div>
+        <div>
+            <div class="sign-up-message-container">
+                <span>Don't have an account?</span><span (click)="navigateToRegistrationPage()" class="sign-up">Sign Up here</span>
+            </div>
+        </div>
+    </form>
+</div>
