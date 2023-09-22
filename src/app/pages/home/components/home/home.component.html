@@ -2,7 +2,7 @@
   <mat-card>
     <mat-card-content>
       <div *ngFor="let election of elections; index as i;">
-        <app-election [election]="election" [electionIndex]="i"></app-election>
+        <app-election [election]="election" (CommentsUpdated)="commentsUpdated()" [electionIndex]="i"></app-election>
       </div>
     </mat-card-content>
   </mat-card>
