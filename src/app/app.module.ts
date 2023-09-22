@@ -12,9 +12,12 @@ import { CandidatesOverviewComponent } from './pages/candidates-overview/candida
 import { RegistrationComponent } from './pages/registration/registration.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { MatInputModule } from '@angular/material/input';
+import { MatDatepickerModule } from '@angular/material/datepicker';
+import {MatSelectModule} from '@angular/material/select';
 import { LoginComponent } from './pages/login/login.component';
 import { NavBarComponent } from './pages/nav-bar/nav-bar.component';
 import { HowToVotePageComponent } from './pages/how-to-vote-page/how-to-vote-page.component'; 
+import { MatNativeDateModule } from '@angular/material/core';
 
 @NgModule({
   declarations: [
@@ -30,7 +33,6 @@ import { HowToVotePageComponent } from './pages/how-to-vote-page/how-to-vote-pag
     AppRoutingModule,
     CookieModule,
     HttpClientModule,
-    CookieModule,
     ServiceWorkerModule.register('ngsw-worker.js', {
       enabled: !isDevMode(),
       // Register the ServiceWorker as soon as the application is stable
@@ -42,7 +44,10 @@ import { HowToVotePageComponent } from './pages/how-to-vote-page/how-to-vote-pag
     MatButtonModule,
     FormsModule,
     ReactiveFormsModule,
-    MatInputModule
+    MatInputModule,
+    MatDatepickerModule,
+    MatSelectModule,
+    MatNativeDateModule
   ],
   providers: [],
   bootstrap: [AppComponent]

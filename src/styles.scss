@@ -25,6 +25,18 @@ $bg-color: #1976d2;
         .register-button {
             width: 100%;
         }
+
+        .optional-label {
+          margin-bottom: 15px;
+        }
+
+        .datepicker-custom {
+          width: 100%;
+        }
+
+        .custom-select {
+          width: 100%;
+        }
     }
 
     @media(max-width: 800px){
