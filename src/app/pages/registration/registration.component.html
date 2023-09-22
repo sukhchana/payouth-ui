@@ -28,6 +28,48 @@
                 <input type="password" matInput [(ngModel)]="repassword" [ngModelOptions]="{standalone: true}">
             </mat-form-field>
         </div>
+        <div class="optional-label">
+            <span>Optional Inputs</span>
+        </div>
+        <div>
+            <mat-form-field class="datepicker-custom">
+                <mat-label>Date of birth</mat-label>
+                <input matInput [matDatepicker]="picker">
+                <mat-hint>MM/DD/YYYY</mat-hint>
+                <mat-datepicker-toggle matIconSuffix [for]="picker"></mat-datepicker-toggle>
+                <mat-datepicker #picker></mat-datepicker>
+              </mat-form-field>              
+        </div>
+        <div>
+            <mat-form-field class="custom-select">
+                <mat-label>Gender</mat-label>
+                <mat-select>
+                  <mat-option *ngFor="let gender of genders" [value]="gender">
+                    {{gender}}
+                  </mat-option>
+                </mat-select>
+              </mat-form-field>
+        </div>
+        <div>
+            <mat-form-field class="custom-select">
+                <mat-label>Race</mat-label>
+                <mat-select>
+                  <mat-option *ngFor="let race of races" [value]="race">
+                    {{race}}
+                  </mat-option>
+                </mat-select>
+              </mat-form-field>
+        </div>
+        <div>
+            <mat-form-field class="custom-select">
+                <mat-label>County</mat-label>
+                <mat-select>
+                  <mat-option *ngFor="let county of counties" [value]="county">
+                    {{county}}
+                  </mat-option>
+                </mat-select>
+              </mat-form-field>
+        </div>
         <button mat-button color="primary" class="register-button" (click)="registerUser()" [disabled]="isFormInvalid()">Register</button>
     </form>        
 </div>
