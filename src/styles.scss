@@ -2,6 +2,9 @@
 
 html, body { height: 100%; }
 body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+$menuHeight: 60px;
+$menuBreakpoint: 1000px;
+$bg-color: #1976d2;
 
 .registration-page {
 
@@ -10,6 +13,10 @@ body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
     }
 
     padding: 40px;
+
+    .back-button-container {
+        margin-bottom: 10px;
+    }
 }
 
 .login-page {
@@ -18,11 +25,12 @@ body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
     }
 
     padding: 40px;
-}
 
-$menuHeight: 60px;
-$menuBreakpoint: 1000px;
-$bg-color: #1976d2;
+    .sign-up {
+        cursor: pointer;
+        color: $bg-color;
+    }
+}
 
 .navbar {
   position: relative;

@@ -35,4 +35,8 @@ export class RegistrationComponent {
   isFormInvalid(): boolean{
     return !this.registrationForm.valid;
   }
+
+  navigateToLoginPage(){
+    this.router.navigate(['/login']);
+  }
 }

@@ -1,5 +1,14 @@
 <div class="login-page">
-    
-    <input type="email" matInput placeholder="Ex. pat@example.com" [(ngModel)]="email">
-    <button mat-button color="primary" (click)="loginUser()">Login</button>
+    <div>
+        Email
+    </div>
+    <div>
+        <input type="email" matInput placeholder="Ex. user@example.com" [(ngModel)]="email">
+    </div>
+    <div>
+        <button mat-button color="primary" (click)="loginUser()">Log in</button>
+    </div>
+    <div>
+        <span>Don't have an account?</span><span (click)="navigateToRegistrationPage()" class="sign-up">Sign Up here</span>
+    </div>
 </div>

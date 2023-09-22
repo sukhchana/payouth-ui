@@ -20,4 +20,8 @@ export class LoginComponent {
       this.router.navigate(['/']);
     }
   }
+
+  navigateToRegistrationPage(){
+    this.router.navigate(['/register']);
+  }
 }
