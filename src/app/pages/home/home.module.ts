@@ -11,9 +11,15 @@ import { ElectionCommentsComponent } from "./components/electionComments/electio
 import { ElectionCommentComponent } from "./components/electionComment/election-comment.component";
 import { MatCardModule } from '@angular/material/card';
 import { MatProgressBarModule } from '@angular/material/progress-bar';
+import { MatExpansionModule } from '@angular/material/expansion';
+import { MatSlideToggleModule } from '@angular/material/slide-toggle';
+import { FlexLayoutModule } from '@angular/flex-layout';
+import { FormsModule } from "@angular/forms";
+import { MatButtonModule } from "@angular/material/button";
+
 @NgModule(
   {
-    imports: [HomeRoutingModule, CommonModule, MatCardModule, MatProgressBarModule],
+    imports: [FlexLayoutModule, HomeRoutingModule, CommonModule, FormsModule, MatCardModule, MatProgressBarModule, MatButtonModule, MatExpansionModule, MatSlideToggleModule],
     declarations: [HomeComponent,
       ElectionComponent, ElectionStagesComponent, ElectionStageComponent,
       ElectionStageElementsComponent, ElectionStageElementComponent,

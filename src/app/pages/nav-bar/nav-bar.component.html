@@ -6,6 +6,9 @@
             <span class="title">
               Hackathon 2023 - PA Youth Vote
             </span>
+            <span class="title-short">
+              PA Youth Vote
+            </span>
         </a>
       </li>
       <li class="burger" (click)="toggleMenu()">
@@ -14,6 +17,7 @@
       <li class="menu" [class.is-open]="isMenuOpen">
         <ng-container *ngIf="isUserLoggedIn()">
             <a (click)="navigateToPage('/')" class="menu-item"><span>Elections</span><i class="material-icons center-icon">ballot</i></a>
+            <a (click)="navigateToPage('/polling-stations')" class="menu-item"><span>Polling Stations</span><i class="material-icons center-icon">where_to_vote</i></a>
             <a (click)="navigateToPage('/candidates')" class="menu-item"><span>Candidates</span><i class="material-icons center-icon">person_search</i></a>
             <a (click)="navigateToPage('/how-to-vote')" class="menu-item"><span>how to vote</span><i class="material-icons center-icon">how_to_vote</i></a>
             <a class="menu-item"><span>{{getUserEmail()}}</span><i class="material-icons center-icon">person</i></a>

@@ -3,8 +3,18 @@
     <p>{{election?.name}}</p>
   </mat-card-header>
   <mat-card-content>
-    {{election?.details}}
-    <app-election-stages [stages]="election?.stages"></app-election-stages>
-    <app-election-comments [comments]="election?.comments"></app-election-comments>
+    <img
+        style="width: 100%; max-height: 300px;"
+         src="/assets/4426576.jpg" />
+    <div *ngIf="election && election.details">
+      <ul>
+        <li *ngFor="let detail of election.details.split('\n')">
+          {{detail}}
+        </li>
+      </ul>
+    </div>
+    <mat-progress-bar mode="determinate" [value]="progress"></mat-progress-bar>
+    <app-election-stages [stages]="election?.stages" [electionIndex]="electionIndex"></app-election-stages>
+    <app-election-comments [electionIndex]="electionIndex" [comments]="election?.comments"></app-election-comments>
   </mat-card-content>
 </mat-card>

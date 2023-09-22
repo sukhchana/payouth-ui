@@ -3,7 +3,7 @@
 html, body { height: 100%; }
 body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
 $menuHeight: 60px;
-$menuBreakpoint: 1200px;
+$menuBreakpoint: 1400px;
 $bg-color: #1976d2;
 
 .registration-page {
@@ -128,6 +128,18 @@ $bg-color: #1976d2;
         }  
     }
 
+    @media(max-width: 400px){
+      padding: 15px;      
+
+      .how-to-vote-container {
+          padding-left: 5%;
+          padding-right: 5%;
+          display: grid;
+          grid-template-columns: repeat(2, 1fr);
+          grid-gap: 10px;
+      }  
+  }
+
     .external-source-item {
         border: 1px solid #1976d2;
         padding: 10px;
@@ -151,6 +163,20 @@ $bg-color: #1976d2;
     }
 }
 
+.polling-stations {
+  padding: 40px;
+
+  .iframe-container {
+    width: 100%;
+    min-height: 70vh;
+  }
+
+  @media(max-width: 800px){
+    padding: 20px;      
+
+  }
+}
+
 .navbar {
   position: relative;
   z-index: 999;
@@ -172,6 +198,22 @@ $bg-color: #1976d2;
   .title {
     float: right;
     margin-top: 10px;
+  }
+
+  .title-short {
+    display: none;
+    float: right;
+    margin-top: 10px;
+  }
+
+  @media (max-width: 800px) {
+    .title {
+      display: none;
+    }
+
+    .title-short {
+      display: inline;
+    }
   }
 
   ul {
@@ -245,5 +287,14 @@ $bg-color: #1976d2;
       font-weight: 600;
       cursor: pointer;
     }
+  }
+}
+
+.content{
+  li {
+    overflow-wrap: break-word;
+  }
+  p {
+    overflow-wrap: break-word;
   }
 }
