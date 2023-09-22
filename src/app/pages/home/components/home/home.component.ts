@@ -5,36 +5,33 @@ import { electionService } from "../../../../services/election.service";
 import { CookieService } from "ngx-cookie-service";
 
 @Component(
-    {
-        selector: 'app-home',
-        templateUrl: './home.component.html',
-        styleUrls: ['./home.component.scss'],
-    }
+  {
+    selector: 'app-home',
+    templateUrl: './home.component.html',
+    styleUrls: ['./home.component.scss'],
+  }
 )
 export class HomeComponent implements OnInit, OnDestroy {
-    private subscription = new Subscription();
-    public elections?: election[];
+  private subscription = new Subscription();
+  public elections?: election[];
 
-    constructor(private service: electionService) {
-    }
+  constructor(private service: electionService) {
+  }
 
-    ngOnInit() {
-        this.subscription.add(this.service.getElections().subscribe(elections => {
-            this.elections = elections;
-            this.setTimeout();
-        }));
-    }
+  public commentsUpdated() {
+  }
 
-    public setTimeout() {
-        window.setTimeout(() => {
-            this.subscription.add(this.service.getElections().subscribe(elections => {
-                this.elections = elections;
-                this.setTimeout();
-            }));
-        }, 30000);
-    }
+  ngOnInit() {
+    this.load();
+  }
 
-    ngOnDestroy() {
-        this.subscription.unsubscribe();
-    }
+  public load() {
+    this.subscription.add(this.service.getElections().subscribe(elections => {
+      this.elections = elections;
+    }));
+  }
+
+  ngOnDestroy() {
+    this.subscription.unsubscribe();
+  }
 }
