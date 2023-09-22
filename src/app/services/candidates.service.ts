@@ -14,5 +14,4 @@ export class CandidatesService {
     return this.httpClient
     .get<Candidate[]>('/assets/data/candidates.json');
   }
-  
 }
