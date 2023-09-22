@@ -3,10 +3,14 @@
     <p>{{election?.name}}</p>
   </mat-card-header>
   <mat-card-content>
-    <div *ngIf="election && election.details" >
+    <img
+         style="height:300px;width:100%"
+         src="/assets/4426576.jpg" />
+    <div *ngIf="election && election.details">
       <ul>
         <li *ngFor="let detail of election.details.split('\n')">
-          {{detail}}</li>
+          {{detail}}
+        </li>
       </ul>
     </div>
     <mat-progress-bar mode="determinate" [value]="progress"></mat-progress-bar>
