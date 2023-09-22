@@ -34,12 +34,21 @@ export class ElectionCommentsComponent  implements OnDestroy {
     const username = this.cookieService.get(EmailCookieName);
     if (this.stageIndex) {
       this.subscription.add(this.service.addStageComment(this.electionIndex, this.stageIndex, username, this.commentInput.nativeElement.value).subscribe(() => {
+        if (this.stageIndex) {
+          this.subscription.add(this.service.getStageComments(this.electionIndex, this.stageIndex).subscribe(comments => {
+            this.comments = comments;
+          }));
+        }
         this.CommentsUpdated.emit();
-    }));
+      }));
     } else {
       this.subscription.add(this.service.addElectionComment(this.electionIndex, username, this.commentInput.nativeElement.value).subscribe(() => {
+        this.subscription.add(this.service.getElectionComments(this.electionIndex).subscribe(comments => {
+          this.comments = comments;
+        }));
         this.CommentsUpdated.emit();
       }));
     }
+    this.commentInput.nativeElement.value = '';
   }
 }
