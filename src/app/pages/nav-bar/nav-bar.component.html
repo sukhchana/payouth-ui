@@ -13,7 +13,8 @@
       </li>
       <li class="menu" [class.is-open]="isMenuOpen">
         <ng-container *ngIf="isUserLoggedIn()">
-            <a [routerLink]="['/candidates']" class="menu-item"><span>Candidates</span><i class="material-icons center-icon">ballot</i></a>
+            <a [routerLink]="['/']" class="menu-item"><span>Elections</span><i class="material-icons center-icon">ballot</i></a>
+            <a [routerLink]="['/candidates']" class="menu-item"><span>Candidates</span><i class="material-icons center-icon">person_search</i></a>
             <a [routerLink]="['/how-to-vote']" class="menu-item"><span>how to vote</span><i class="material-icons center-icon">how_to_vote</i></a>
             <a class="menu-item"><span>{{getUserEmail()}}</span><i class="material-icons center-icon">person</i></a>
             <a class="menu-item" (click)="logout()"><span>Logout</span><i class="material-icons center-icon">logout</i></a>
