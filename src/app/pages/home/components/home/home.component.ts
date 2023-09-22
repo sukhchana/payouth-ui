@@ -19,7 +19,7 @@ export class HomeComponent implements OnInit, OnDestroy {
   }
 
   public commentsUpdated() {
-    this.load(false);
+//    this.load(false);
   }
 
   ngOnInit() {
