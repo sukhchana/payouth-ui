@@ -1,6 +1,6 @@
 <mat-accordion>
   <div *ngFor="let stage of stages; index as i;">
-    <app-election-stage [stage]="stage" [electionIndex]="electionIndex" [stageIndex]="i"></app-election-stage>
+    <app-election-stage [stage]="stage" [electionIndex]="electionIndex" (CommentsUpdated)="commentsUpdated()" [stageIndex]="i"></app-election-stage>
   </div>
 </mat-accordion>
 
