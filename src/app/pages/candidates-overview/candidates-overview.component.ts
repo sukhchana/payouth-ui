@@ -1,5 +1,7 @@
 import { Component } from '@angular/core';
+import { Observable } from 'rxjs';
 import { Candidate } from 'src/app/models/candidate';
+import { CandidatesService } from 'src/app/services/candidates.service';
 
 @Component({
   selector: 'app-candidates-overview',
@@ -7,19 +9,19 @@ import { Candidate } from 'src/app/models/candidate';
   styleUrls: ['./candidates-overview.component.scss']
 })
 export class CandidatesOverviewComponent {
-  protected candidates: Candidate[] = [
-    { firstName: 'John', lastName: 'Doe', party: 'Democratic', policies: ['A', 'B'] , pledges: ['E', 'F', 'G'], picture: 'PIC-LINK'},
-    { firstName: 'Jane', lastName: 'Doe', party: 'Republican', policies: ['C', 'D'] , pledges: ['H', 'I', 'J'], picture: 'PIC-LINK'},
-    { firstName: 'Abcd', lastName: 'Doe', party: 'Republican', policies: ['C', 'D'] , pledges: ['H', 'I', 'J'], picture: 'PIC-LINK'},
-    { firstName: 'Efgh', lastName: 'Doe', party: 'Republican', policies: ['C', 'D'] , pledges: ['H', 'I', 'J'], picture: 'PIC-LINK'},
-    { firstName: 'Ijkl', lastName: 'Doe', party: 'Republican', policies: ['C', 'D'] , pledges: ['H', 'I', 'J'], picture: 'PIC-LINK'},
-    { firstName: 'Mnop', lastName: 'Doe', party: 'Republican', policies: ['C', 'D'] , pledges: ['H', 'I', 'J'], picture: 'PIC-LINK'},
-    { firstName: 'Qrst', lastName: 'Doe', party: 'Republican', policies: ['C', 'D'] , pledges: ['H', 'I', 'J'], picture: 'PIC-LINK'},
-    { firstName: 'Jane', lastName: 'Doe', party: 'Republican', policies: ['C', 'D'] , pledges: ['H', 'I', 'J'], picture: 'PIC-LINK'},
-  ]
-  // protected firstName: string  = "John";
-  // protected lastName: string  = "Doe";
-  // protected party: string  = "Independent";
+
+  constructor(private candidatesService: CandidatesService){ }
+  protected candidates: Candidate[] = [];
+
+
+  public ngOnInit(): void{
+    this.candidatesService.getAllCandidates().subscribe(x => 
+      {
+        console.log(x);
+        this.candidates = x
+      });
+
+  }
 
   public getAllCandidates(): Candidate[] {
     return this.candidates;

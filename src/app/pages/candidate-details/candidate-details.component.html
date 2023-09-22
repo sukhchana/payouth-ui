@@ -1,1 +1,49 @@
-<p>candidate-details works!</p>
+<div class ="full-background">
+  <div class="candidate-details">
+    <div class="cell1">
+        <mat-card class="candidate-overview-card">
+            <mat-card-header>
+            <mat-card-title class="candidate-overview-name">{{candidate?.firstName}}, {{candidate?.lastName}}</mat-card-title>
+            <mat-card-subtitle class="candidate-overview-party">{{candidate?.party}}</mat-card-subtitle>
+            </mat-card-header>
+            <div>
+                <img class="candidate-overview-image" mat-card-image src="https://material.angular.io/assets/img/examples/shiba2.jpg" alt="Photo of a {{candidate.firstName}}, {{candidate.lastName}}" >
+            </div>
+            <mat-card-content class="candidate-overview-summary">
+            <p>
+                {{candidate.summary}}
+            </p>
+            </mat-card-content>
+            <mat-card-actions class="candidate-overview-buttons">
+                <button mat-button class="candidate-overview-button">Like ❤️ </button>
+                <button mat-button class="candidate-overview-button">Share 👍</button>
+            </mat-card-actions>
+        </mat-card>
+    </div>
+    <div class="cell2">
+        <mat-card class="candidate-overview-policies-card">
+            <mat-card-header>
+                <mat-card-title class="candidate-overview-name">Policies</mat-card-title>
+            </mat-card-header>
+            <mat-card-content>
+                <mat-list role="list" *ngFor="let policy of candidate?.policies; let i = index">
+                    <mat-list-item role="listitem" [class.alt-row]="i%2">{{policy}}</mat-list-item>
+                </mat-list>
+            </mat-card-content>
+          </mat-card>
+    </div>
+    <div class="cell3">
+        <mat-card class="candidate-overview-pledges-card">
+            <mat-card-header>
+                <mat-card-title class="candidate-overview-name">Pledges</mat-card-title>
+            </mat-card-header>
+            <mat-card-content>
+                <mat-list role="list" *ngFor="let pledge of candidate?.pledges; let i = index">
+                    <mat-list-item role="listitem" [class.alt-row]="i%2">{{pledge}}</mat-list-item>
+                </mat-list>
+            </mat-card-content>
+          </mat-card>
+    </div>
+</div>
+
+</div>

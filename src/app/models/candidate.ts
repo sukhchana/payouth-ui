@@ -5,4 +5,6 @@ export interface Candidate {
     policies: string[];
     pledges: string[];
     picture: string;
+    summary: string;
+    incumbent: boolean;
 }
