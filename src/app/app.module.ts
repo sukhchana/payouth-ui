@@ -13,8 +13,7 @@ import { CandidatesOverviewComponent } from './pages/candidates-overview/candida
 @NgModule({
   declarations: [
     AppComponent,
-    CandidatesOverviewComponent
-
+    CandidatesOverviewComponent,
   ],
   imports: [
     BrowserModule,
@@ -31,7 +30,6 @@ import { CandidatesOverviewComponent } from './pages/candidates-overview/candida
     BrowserAnimationsModule,
     MatCardModule,
     MatButtonModule,
-
   ],
   providers: [],
   bootstrap: [AppComponent]
