@@ -5,6 +5,7 @@ import { CandidatesOverviewComponent } from './pages/candidates-overview/candida
 import { RegistrationComponent } from './pages/registration/registration.component';
 import { IsUserLoggedInGuard } from './guards/is-user-logged-in.guard';
 import { LoginComponent } from './pages/login/login.component';
+import { HowToVotePageComponent } from './pages/how-to-vote-page/how-to-vote-page.component';
 
 const routes: Routes = [
   {
@@ -25,6 +26,11 @@ const routes: Routes = [
   {
     path: 'login', 
     component: LoginComponent 
+  },
+  {
+    path: 'how-to-vote', 
+    component: HowToVotePageComponent,
+    canActivate: [IsUserLoggedInGuard]  
   }
 ];
 

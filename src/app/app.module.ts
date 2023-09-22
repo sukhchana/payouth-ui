@@ -13,7 +13,8 @@ import { RegistrationComponent } from './pages/registration/registration.compone
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { MatInputModule } from '@angular/material/input';
 import { LoginComponent } from './pages/login/login.component';
-import { NavBarComponent } from './pages/nav-bar/nav-bar.component'; 
+import { NavBarComponent } from './pages/nav-bar/nav-bar.component';
+import { HowToVotePageComponent } from './pages/how-to-vote-page/how-to-vote-page.component'; 
 
 @NgModule({
   declarations: [
@@ -21,7 +22,8 @@ import { NavBarComponent } from './pages/nav-bar/nav-bar.component';
     CandidatesOverviewComponent,
     RegistrationComponent,
     LoginComponent,
-    NavBarComponent
+    NavBarComponent,
+    HowToVotePageComponent
   ],
   imports: [
     BrowserModule,
